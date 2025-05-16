@@ -3268,8 +3268,7 @@ if not TOKEN:
     print("❌ ERROR: Discord bot token not provided. Please set the DISCORD_BOT_TOKEN environment variable.")
     exit(1)
 
-# ไม่รองรับ slash commands ใน discord.py แบบปกติ 
-# ใช้คำสั่งปกติแทน !ร้าน
+@bot.tree.command(name="ร้าน", description="เปิดร้านค้าเพื่อเลือกซื้อสินค้า")
 async def shop_slash(interaction: discord.Interaction, ประเทศ: str = None, หมวด: str = None):
     """Slash command to open the shop
     
